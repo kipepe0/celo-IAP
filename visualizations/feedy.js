@@ -7,8 +7,8 @@ const events = require('events');
 const WebSocket = require('ws');
 const BigNumber = require('bignumber.js');
 
-const kGeth = "ws://35.233.175.45:8546/ws";
-const kBlockScout = "https://mitiapstaging-blockscout.celo-networks-dev.org/";
+const kGeth = "ws://35.247.61.47:8546/ws";
+const kBlockScout = "https://mitiapproduction-blockscout.celo-networks-dev.org/";
 
 
 function tlog(msg) {
