@@ -224,6 +224,7 @@ export async function executeBid(
     buyTokenAmount,
     web3
   )
+  console.log(`Committed bid with salt: ${salt}`)
 
   await sleepUntilStage(StagesEnum.Reveal, auctionParams)
   await revealBid(
