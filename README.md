@@ -16,3 +16,13 @@ nvm install v8.12.0 && nvm use v8.12.0
 ## Yarn
 
 Yarn is a better [npm (node package manager)](https://www.npmjs.com/) client. It installs the dependencies necessary to run all of the projects. Install it - make sure to use the `--without-node` flag since we are using nvm - [here](https://yarnpkg.com/en/docs/install#mac-stable)
+
+
+## Git
+
+Git is a distributed version control system. GitHub is where we host our code. 
+
+Clone this repositry.
+```
+git clone https://github.com/celo-org/celo-IAP
+```
