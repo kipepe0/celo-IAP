@@ -1,4 +1,5 @@
 import Web3 = require('web3')
+import { BigNumber } from 'bignumber.js'
 
 import BSTAuction from '@celo/sdk/dist/contracts/BSTAuction'
 import Exchange from '@celo/sdk/dist/contracts/Exchange'
@@ -80,12 +81,12 @@ const simpleBidStrategy = async (web3: any, argv: any) => {
 
     if (parseInt(auctionSellTokenWithdrawn) > 0) {
       console.info(
-        `Withdrew ${await parseFromContractDecimals(auctionSellTokenWithdrawn, sellToken)} ${await sellToken.methods.symbol().call()} from the auction`
+        `Withdrew ${await parseFromContractDecimals(new BigNumber(auctionSellTokenWithdrawn), sellToken)} ${await sellToken.methods.symbol().call()} from the auction`
       )
     }
     if (parseInt(auctionBuyTokenWithdrawn) > 0) {
       console.info(
-        `Withdrew ${await parseFromContractDecimals(auctionBuyTokenWithdrawn, buyToken)} ${await buyToken.methods.symbol().call()} from the auction`
+        `Withdrew ${await parseFromContractDecimals(new BigNumber(auctionBuyTokenWithdrawn), buyToken)} ${await buyToken.methods.symbol().call()} from the auction`
       )
     }
   })
